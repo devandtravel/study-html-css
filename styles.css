@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@media (max-width: 700px) {
+  .info {
+    display: block;
+  }
+}
+
 body {
   background-color: #f1f1f1;
   color: #0f141e;
-
   font: normal 16px 'Roboto', sans-serif;
 }
 
@@ -11,23 +16,25 @@ body {
   width: 20vw;
   min-width: 100px;
   max-width: 200px;
+  object-fit: scale-down;
 }
 
 .info p {
   color: #6f6f6f;
-  margin: 0;
 }
 
-.social {
-  background: salmon;
-  padding: 15px;
-  margin: 15px;
-  border: 2px solid black;
+.info {
+  display: flex;
+}
+
+.info-text {
+  margin-left: 40px;
 }
 
 .container {
   max-width: 750px;
   margin: auto;
+  padding-top: 30px;
 }
 
 a {
@@ -45,7 +52,6 @@ a:visited {
 
 .card {
   padding: 15px 20px;
-  background: salmon;
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -53,9 +59,74 @@ a:visited {
 .bg-yellow {
   background: #fff9dc;
 }
+
 .bg-green {
   background: #e5ffe7;
 }
+
 .bg-red {
   background: #ffe5e5;
+}
+
+.bg-violet {
+  background: #f2e5ff;
+}
+
+.bg-orange {
+  background: #fff6e5;
+}
+
+.bg-white {
+  background: white;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #ccc;
+  color: black;
+  padding: 15px 0 10px;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.row > .form-group {
+  width: 50%;
+}
+
+.row > .form-group:first-child {
+  margin-right: 20px;
+}
+
+.btn {
+  background: #111;
+  padding: 10px 20px;
+  color: white;
+  margin-top: 5px;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
 }
